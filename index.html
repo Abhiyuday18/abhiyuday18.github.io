@@ -367,7 +367,7 @@
     .project-link-primary { background: var(--white); color: var(--bg); border-color: var(--white); }
     .project-link:hover { background: #ddd; color: var(--bg); }
     .project-link:focus-visible { outline: 2px solid var(--white); outline-offset: 4px; }
-    .project-card-compact { grid-column: 1 / -1; }
+    .project-card-wide, .project-card-compact { grid-column: 1 / -1; }
     .project-card-compact .project-name { font-size: 1.3rem; }
     .project-card-compact .project-desc { max-width: 680px; margin-bottom: 1.1rem; }
 
@@ -564,7 +564,7 @@
             <div class="stat-label">Expected Graduation · BS CS</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number" data-target="5" data-suffix="">5</div>
+            <div class="stat-number" data-target="6" data-suffix="">6</div>
             <div class="stat-label">Projects · Tools &amp; Apps</div>
           </div>
           <div class="stat-card">
@@ -695,12 +695,39 @@
           </div>
         </article>
 
-        <article class="project-card project-card-compact" id="card-5" aria-labelledby="project-title-5">
+        <article class="project-card project-card-wide" id="card-5" aria-labelledby="project-title-5">
           <div class="project-header">
-            <span class="project-num">05 / Foundations</span>
+            <span class="project-num">05 / Selected project</span>
+            <span class="project-status">Local prototype</span>
+          </div>
+          <span class="project-category">Full-stack · Intramural sports operations</span>
+          <h3 class="project-name" id="project-title-5">CourtOps</h3>
+          <p class="project-desc">Built from my experience as an intramural sports supervisor: one workspace for game-day matchups, referee crews, results, and performance feedback across multiple sports.</p>
+          <div class="project-flow"><span>Flow /</span> Plan → Assign → Record → Evaluate</div>
+          <ul class="project-details">
+            <li><strong>Conflict-aware crew planning.</strong> Shared referee profiles, availability and workload checks, and basketball court/table rotations that supervisors can review before activation.</li>
+            <li><strong>Feedback that carries forward.</strong> Game evaluations, next-game coaching notes, and printable or CSV two-week development reports with observation counts.</li>
+          </ul>
+          <p class="project-engineering"><strong>Engineering detail</strong>PostgreSQL transactions serialize competing planning writes to prevent cross-program double-booking. Revision checks reject stale edits, while saved inputs and algorithm versions keep recommendations inspectable.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">Vitest</span>
+            <span class="tag">Playwright</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/Abhiyuday18/CourtOps" target="_blank" rel="noopener noreferrer" class="project-link project-link-primary" aria-label="View source for CourtOps">View source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card project-card-compact" id="card-6" aria-labelledby="project-title-6">
+          <div class="project-header">
+            <span class="project-num">06 / Foundations</span>
             <span class="project-status">Certification project</span>
           </div>
-          <h3 class="project-name" id="project-title-5">Game Dev Capstone</h3>
+          <h3 class="project-name" id="project-title-6">Game Dev Capstone</h3>
           <p class="project-desc">Where it started: a playable game built during a game development certification, bringing together game loops, collision detection, sprites, and level design.</p>
           <div class="project-tags">
             <span class="tag">Java</span>
@@ -876,7 +903,8 @@
       { text: '  [02] CantSayNo        — private game circles',    color: '#666',     delay: 2450},
       { text: '  [03] AlgoRythm        — algorithm visualizer',    color: '#666',     delay: 2600},
       { text: '  [04] TaskFlow         — CLI task manager',        color: '#666',     delay: 2750},
-      { text: '  [05] Game Dev Capstone — where it all started',   color: '#666',     delay: 2900},
+      { text: '  [05] CourtOps         — intramural operations',  color: '#666',     delay: 2850},
+      { text: '  [06] Game Dev Capstone — where it all started',   color: '#666',     delay: 2950},
       { text: '',                                                    color: '',         delay: 3000},
       { text: '> you found the easter egg.',                        color: '#aaa',     delay: 3100},
       { text: '> ap.dev is open for internships. hire him.',        color: '#ffffff',  delay: 3500},
