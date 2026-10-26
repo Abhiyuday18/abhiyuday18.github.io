@@ -309,7 +309,11 @@
     /* ─── ABOUT ─── */
     #about { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: start; }
-    .about-text p { color: var(--muted2); margin-bottom: 1.1rem; font-size: 0.95rem; }
+    .about-text p { color: #aaa; margin-bottom: 1.25rem; font-size: 0.95rem; }
+    .about-text .about-lead { color: var(--text); font-size: 1.15rem; line-height: 1.7; }
+    .about-text a { color: var(--text); text-underline-offset: 4px; }
+    .about-text a:hover { color: var(--white); }
+    .about-text a:focus-visible { outline: 2px solid var(--white); outline-offset: 4px; }
     .about-text p:last-child { margin-bottom: 0; }
     .about-stats { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); }
     .stat-card {
@@ -533,7 +537,7 @@
         alias: <strong>ap.dev</strong> &nbsp;·&nbsp; sophomore SWE @ SFSU &nbsp;·&nbsp; targeting Summer 2027 internships
       </p>
       <div class="hero-cta reveal reveal-delay-4">
-        <a href="#projects" class="btn btn-primary">View His Work</a>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="https://github.com/Abhiyuday18" target="_blank" class="btn btn-outline">GitHub ↗</a>
         <a href="https://www.linkedin.com/in/abhiyuday-pratap-singh-a-p-27043a337" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
       </div>
@@ -542,7 +546,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" aria-labelledby="about-title">
     <div class="section-inner">
       <p class="section-label reveal">About</p>
       <div class="ai-title-container">
@@ -550,13 +554,14 @@
           <span class="ai-prompt-arrow">▸</span>
           <span class="ai-prompt-text">prompt: <span class="prompt-query">"who is ap.dev?"</span></span>
         </div>
-        <h2 class="section-title ai-generate" data-text="Builder. Leader. Engineer."></h2>
+        <h2 class="section-title" id="about-title">Imagination, backed by engineering.</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>Abhiyuday is a sophomore CS student at SFSU with a game development certification and a genuine drive to build things — CLI tools, visualizers, whatever solves the problem in front of him.</p>
-          <p>Outside code, he supervises the Intramural Division at the Mashouf Wellness Center and holds three roles at SparkSF, SFSU's ACM special interest group: Outreach Officer, Design Assistant, and Marketing. He works well at the edge of technical and human.</p>
-          <p>He's targeting Summer 2027 software engineering internships — backend, full-stack, anything with a hard problem inside it.</p>
+          <p class="about-lead">I’m Abhiyuday, a developer and computer science student at San Francisco State. I left home in India to pursue opportunities that would challenge me, expand what I’m capable of, and give me the chance to turn ideas into useful software.</p>
+          <p>I like getting to the foundation of a problem: questioning assumptions, breaking it into smaller parts, and understanding why something works before deciding how to improve it. Debugging is a part of development I’m drawn to. I trace unexpected behavior back to its cause, test my reasoning, and think through the edge cases that could break a solution.</p>
+          <p>I keep building because I keep finding things worth solving: tools that make everyday work easier, applications that bring people together, and ways to make difficult concepts easier to understand. I’m interested in the whole path from an idea to a working system—the interface, the logic, the data, and how they hold up together. In a world increasingly shaped by software, I see coding ability and imagination as capabilities I can keep expanding.</p>
+          <p>Leadership has taught me to take responsibility, communicate clearly, and help people move toward a shared goal. I bring that same commitment to engineering: stay curious, work through uncertainty, and follow through. Graduating in 2028, I’m seeking a Summer 2027 software engineering internship where I can contribute that mindset, deepen my technical judgment, and take on problems that stretch me.</p>
         </div>
         <div class="about-stats reveal reveal-delay-2">
           <div class="stat-card">
